@@ -14,4 +14,4 @@ jobs:
         with:
           submodules: recursive
       - name: run tests
-        run: npx jest
+        run: npm install && npx jest
