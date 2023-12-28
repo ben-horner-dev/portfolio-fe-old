@@ -18,12 +18,17 @@ jobs:
       - name: Checkout Parent Repository
         uses: actions/checkout@v2
         with:
-          repository: https://github.com/ben-horner-dev/portfolio.git
+          repository: ben-horner-dev/portfolio.git
           ref: main
 
       - name: Update Parent to Latest Submodule Commit
         run: |
-          git submodule update --remote
+          git config --global user.email "info@benhorner.dev"
+          git config --global user.name "ben-horner-dev"
+          cd src/frontend
+          git checkout main
+          git pull
+          cd ../..
           git add .
-          git commit -m "Update parent to latest submodule commit"
+          git commit -m "Chore: Update parent to latest submodule commit"
           git push
