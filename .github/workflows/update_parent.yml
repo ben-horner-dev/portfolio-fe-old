@@ -21,14 +21,16 @@ jobs:
         
 
       - name: Update Parent to Latest Submodule Commit
-        run: |
-          git config --global user.email "info@benhorner.dev"
-          git config --global user.name "ben-horner-dev"
-          cd src/frontend
-          git remote get-url origin
-          git checkout main
-          git pull
-          cd ../..
-          git add .
-          git commit -m "Chore: Update parent to latest submodule commit"
-          git push
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          run: |
+            git config --global user.email "info@benhorner.dev"
+            git config --global user.name "ben-horner-dev"
+            cd src/frontend
+            git remote get-url origin
+            git checkout main
+            git pull
+            cd ../..
+            git add .
+            git commit -m "Chore: Update parent to latest submodule commit"
+            git push
