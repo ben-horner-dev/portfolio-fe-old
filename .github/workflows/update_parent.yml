@@ -1,0 +1,28 @@
+name: Update Parent Repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-parent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Submodule
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Checkout Parent Repository
+        uses: actions/checkout@v2
+        with:
+          repository: git@github.com:ben-horner-dev/portfolio.git
+
+      - name: Update Parent to Latest Submodule Commit
+        run: |
+          git submodule update --remote
+          git add .
+          git commit -m "Update parent to latest submodule commit"
+          git push
