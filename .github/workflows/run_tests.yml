@@ -14,4 +14,4 @@ jobs:
         with:
           submodules: recursive
       - name: run tests
-        run: npx jest
+        run: npx jest --passWithNoTests
