@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Parent Repository
         uses: actions/checkout@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.PARENT_TOKEN }}
           repository: ben-horner-dev/portfolio.git
           ref: main
           submodules: recursive
