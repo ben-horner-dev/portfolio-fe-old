@@ -26,6 +26,7 @@ jobs:
           git config --global user.email "info@benhorner.dev"
           git config --global user.name "ben-horner-dev"
           cd src/frontend
+          git remote origin get-url
           git checkout main
           git pull
           cd ../..
