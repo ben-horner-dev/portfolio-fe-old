@@ -25,7 +25,10 @@ jobs:
         run: |
           git config --global user.email "info@benhorner.dev"
           git config --global user.name "ben-horner-dev"
-          git submodule update --remote
+          cd src/frontend
+          git checkout main
+          git pull
+          cd ../..
           git add .
-          git commit -m "Update parent to latest submodule commit"
+          git commit -m "Chore: Update parent to latest submodule commit"
           git push
