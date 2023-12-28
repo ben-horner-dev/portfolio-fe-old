@@ -10,16 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Submodule
-        uses: actions/checkout@v2
-        with:
-          submodules: recursive
+
 
       - name: Checkout Parent Repository
         uses: actions/checkout@v2
         with:
           repository: ben-horner-dev/portfolio.git
           ref: main
+          
+      - name: Checkout Submodule
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Update Parent to Latest Submodule Commit
         run: |
