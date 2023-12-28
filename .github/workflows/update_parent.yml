@@ -18,7 +18,7 @@ jobs:
       - name: Checkout Parent Repository
         uses: actions/checkout@v2
         with:
-          repository: git@github.com:ben-horner-dev/portfolio.git
+          repository: https://github.com/ben-horner-dev/portfolio.git
           ref: main
 
       - name: Update Parent to Latest Submodule Commit
