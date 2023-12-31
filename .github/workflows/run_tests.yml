@@ -2,7 +2,7 @@ name: Run Tests
 on:
   push:
     branches:
-      - "feature/**"
+      - 'feature/**'
 
 jobs:
   build:
@@ -14,4 +14,4 @@ jobs:
         with:
           submodules: recursive
       - name: run tests
-        run: npm install && npx jest --passWithNoTests
+        run: npm install && npx jest --passWithNoTests && npx playwright test
