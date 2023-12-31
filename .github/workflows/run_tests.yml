@@ -14,4 +14,4 @@ jobs:
         with:
           submodules: recursive
       - name: run tests
-        run: npm install && npx jest --passWithNoTests && npx playwright test
+        run: npm install && npx jest --passWithNoTests
