@@ -7,7 +7,7 @@ if (!targetElement) {
   throw new Error("Couldn't get the 'app' element")
 }
 const app = new App({
-  target: targetElement,
+  target: targetElement
 })
 
 export default app
