@@ -13,7 +13,7 @@
     "lint": "eslint './src/**/*.{js,ts,svelte}'",
     "lint:fix": "eslint --fix './src/**/*.{js,ts,svelte}'",
     "prelint": "npm run format",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests && npx playwright test"
   },
   "devDependencies": {
     "@material/typography": "^14.0.0",
