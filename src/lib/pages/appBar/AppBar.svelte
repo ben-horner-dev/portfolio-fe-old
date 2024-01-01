@@ -50,7 +50,7 @@
     <MenuItems />
   </Drawer>
   <div class="app-bar">
-    <img src="src/assets/images/logo.svg" alt="BH Dev" />
+    <img src="/assets/images/logo.svg" alt="BH Dev" />
     <Links>
       <MenuItems />
     </Links>

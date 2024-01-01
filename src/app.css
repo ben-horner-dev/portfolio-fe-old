@@ -2,7 +2,7 @@
   font-family: 'JetBrains Mono';
   src:
     local('Jet Brains Mono'),
-    url('./assets/fonts/JetBrainsMonoNL-Regular.ttf') format('truetype');
+    url('/assets/fonts/JetBrainsMonoNL-Regular.ttf') format('truetype');
   font-weight: bold;
 }
 

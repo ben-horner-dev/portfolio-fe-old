@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(8, 122, 217, 0.8), rgba(8, 122, 217, 0.6)),
-      url(/src/assets/images/hero.png);
+      url(/assets/images/hero.png);
     background-position: center no-repeat;
     overflow-y: hidden;
     margin: auto;
