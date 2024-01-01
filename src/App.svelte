@@ -1,5 +1,8 @@
 <script lang="ts">
-  import { Hero } from './lib/pages'
+  import { AppBar, Hero } from 'pages'
 </script>
 
-<Hero />
+<main>
+  <AppBar />
+  <Hero />
+</main>

@@ -20,7 +20,8 @@
       "organisms": ["src/lib/organisms"],
       "molecules": ["src/lib/molecules"],
       "atoms": ["src/lib/atoms"],
-      "pages": ["src/lib/pages"]
+      "pages": ["src/lib/pages"],
+      "stores": ["src/stores"]
     }
   },
   "include": [

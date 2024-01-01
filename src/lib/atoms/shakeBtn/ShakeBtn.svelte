@@ -4,6 +4,8 @@
     border: 1px solid #ffffff !important;
     font-weight: 700 !important;
     background-color: transparent;
+    color: #ffffff !important;
+    text-transform: none;
   }
 </style>
 
