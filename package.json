@@ -20,6 +20,10 @@
     "@playwright/test": "^1.40.1",
     "@smui/button": "^7.0.0-beta.16",
     "@smui/card": "^7.0.0-beta.16",
+    "@smui/drawer": "^7.0.0-beta.16",
+    "@smui/icon-button": "^7.0.0-beta.16",
+    "@smui/list": "^7.0.0-beta.16",
+    "@smui/top-app-bar": "^7.0.0-beta.16",
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@testing-library/svelte": "^4.0.5",
     "@tsconfig/svelte": "^5.0.2",
@@ -49,6 +53,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "svelte-material-ui": "^7.0.0-beta.16",
     "ts-node": "^10.9.2"
   }
 }

@@ -10,7 +10,8 @@ export default defineConfig({
       organisms: path.resolve('./src/lib/organisms'),
       atoms: path.resolve('./src/lib/atoms'),
       molecules: path.resolve('./src/lib/molecules'),
-      pages: path.resolve('./src/lib/pages')
+      pages: path.resolve('./src/lib/pages'),
+      stores: path.resolve('./src/stores')
     }
   }
 })

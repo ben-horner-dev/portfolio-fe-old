@@ -34,29 +34,21 @@ test.describe('Hero Page', () => {
   })
 
   test('Contact btn', async ({ page }) => {
-    // Go to the page where the Hero component is rendered
-
-    // Get the button element
     const button = await page.$('.contact-btn')
     if (button) {
-      // Check initial class of the button
       expect(await button.getAttribute('class')).toContain('contact-btn')
 
-      // Trigger mouseover event
       await button.hover()
 
-      // Check class of the button after mouseover
       expect(await button.getAttribute('class')).toContain(
         'animate__animated contact-btn animate__headShake'
       )
 
-      // Trigger animationend event
       await page.evaluate(
         button => button.dispatchEvent(new Event('animationend')),
         button
       )
 
-      // Check class of the button after animationend
       expect(await button.getAttribute('class')).toContain('contact-btn')
     } else {
       throw new Error('Button not found')
