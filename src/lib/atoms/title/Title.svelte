@@ -2,7 +2,7 @@
 </style>
 
 <script lang="ts">
-  const TITLE = `Hello, I'm Ben:`
+  const TITLE = `Hello, I'm Ben...`
 </script>
 
 <main>
