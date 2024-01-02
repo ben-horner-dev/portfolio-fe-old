@@ -22,7 +22,7 @@ jobs:
       - name: Build Image
         run: docker build -t portfolio-fe -f docker/dockerfile.e2e .
       - name: Run build
-        run: docker run -d -p 5173:5173 portfolio-fe
+        run: docker run --network host -d -p 5173:5173 portfolio-fe
       - name: Run Playwright tests
         run: npx playwright test
       - uses: actions/upload-artifact@v3
