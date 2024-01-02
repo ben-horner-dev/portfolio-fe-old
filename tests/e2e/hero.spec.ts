@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 test.describe('Hero Page', () => {
   test('h1 text should appear', async ({ page }) => {
     const text = await page.innerText('h1')
-    expect(text).toBe("Hello, I'm Ben:")
+    expect(text).toBe("Hello, I'm Ben...")
   })
 
   test('long form div text should appear', async ({ page }) => {
@@ -30,7 +30,7 @@ test.describe('Hero Page', () => {
 
   test('text should appear', async ({ page }) => {
     const text = await page.innerText('h1')
-    expect(text).toBe("Hello, I'm Ben:")
+    expect(text).toBe("Hello, I'm Ben...")
   })
 
   test('Contact btn', async ({ page }) => {
