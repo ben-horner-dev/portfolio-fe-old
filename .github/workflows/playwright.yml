@@ -20,9 +20,9 @@ jobs:
       - name: Build FE
         run: npm run build
       - name: Build Image
-        run: docker build portfolio-fe -f docker/dockerfile.e2e
+        run: docker build -t portfolio-fe -f docker/dockerfile.e2e .
       - name: Run build
-        run: docker run <name> 5173:5173
+        run: docker run portfolio-fe 5173:5173
       - name: Run Playwright tests
         run: npx playwright test
       - uses: actions/upload-artifact@v3
