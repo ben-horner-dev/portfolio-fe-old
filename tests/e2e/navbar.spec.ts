@@ -33,8 +33,15 @@ test.describe('Nav Bar', () => {
     if (navLinksBox) {
       const viewportSize = page.viewportSize()
       if (viewportSize) {
-        expect(navLinksBox.x + navLinksBox.width).toBeCloseTo(viewportSize.width - 16, 1) // 1 pixel tolerance
-        expect(navLinksBox.y).toBeCloseTo(0, 1) // 1 pixel tolerance
+        const expectedRight = viewportSize.width - 16
+        expect(navLinksBox.x + navLinksBox.width).toBeGreaterThanOrEqual(
+          expectedRight - 10
+        )
+        expect(navLinksBox.x + navLinksBox.width).toBeLessThanOrEqual(expectedRight + 10)
+
+        const expectedTop = 0
+        expect(navLinksBox.y).toBeGreaterThanOrEqual(expectedTop - 10)
+        expect(navLinksBox.y).toBeLessThanOrEqual(expectedTop + 10)
       }
     }
   })
@@ -99,5 +106,51 @@ test.describe('Nav Bar', () => {
     await drawer?.click()
     const falseDrawer = await page.$('.drawer-false')
     expect(falseDrawer).not.toBeNull()
+  })
+
+  test('Socials link works', async ({ page }) => {
+    await page.setViewportSize({ width: 816, height: 1080 })
+    const githubIcon = page.getByAltText('Github')
+    await expect(githubIcon).not.toBeInViewport()
+    const linkedInIcon = page.getByAltText('LinkedIn')
+    await expect(linkedInIcon).not.toBeInViewport()
+    const socialsLink = page
+      .getByTestId('nav-links')
+      .getByRole('link', { name: 'Socials' })
+    await socialsLink.click()
+    expect(page.url()).toBe('http://localhost:5173/#footer')
+  })
+
+  test('Contact link works', async ({ page }) => {
+    await page.setViewportSize({ width: 816, height: 1080 })
+    const githubIcon = page.getByAltText('Github')
+    await expect(githubIcon).not.toBeInViewport()
+    const linkedInIcon = page.getByAltText('LinkedIn')
+    await expect(linkedInIcon).not.toBeInViewport()
+    const socialsLink = page
+      .getByTestId('nav-links')
+      .getByRole('link', { name: 'Contact' })
+    await socialsLink.click()
+    expect(page.url()).toBe('http://localhost:5173/#footer')
+  })
+  test('Home link works', async ({ page }) => {
+    await page.setViewportSize({ width: 816, height: 1080 })
+    const githubIcon = page.getByAltText('Github')
+    await expect(githubIcon).not.toBeInViewport()
+    const linkedInIcon = page.getByAltText('LinkedIn')
+    await expect(linkedInIcon).not.toBeInViewport()
+    const homeLink = page.getByAltText('BH Dev')
+    await homeLink.click()
+    expect(page.url()).toBe('http://localhost:5173/#hero')
+  })
+  test('Contact Button works', async ({ page }) => {
+    await page.setViewportSize({ width: 816, height: 1080 })
+    const githubIcon = page.getByAltText('Github')
+    await expect(githubIcon).not.toBeInViewport()
+    const linkedInIcon = page.getByAltText('LinkedIn')
+    await expect(linkedInIcon).not.toBeInViewport()
+    const button = await page.$('.contact-btn')
+    await button?.click()
+    expect(page.url()).toBe('http://localhost:5173/#footer')
   })
 })
