@@ -12,7 +12,6 @@
 <script lang="ts">
   import Button from '@smui/button'
   let btnClass = 'contact-btn'
-
   const handleMouseOver = () => {
     btnClass = 'animate__animated contact-btn animate__headShake'
   }
@@ -20,16 +19,12 @@
   const handleAnimationEnd = () => {
     btnClass = 'contact-btn'
   }
-  const handleContactBtnCLick = (event: CustomEvent) => {
-    // TODO: When contact form is ready, transition to contact form smoothly
-    event.preventDefault()
-  }
 </script>
 
 <main>
   <Button
     class={btnClass}
-    on:click={handleContactBtnCLick}
+    href="#footer"
     on:mouseover={handleMouseOver}
     on:animationend={handleAnimationEnd}>Contact</Button
   >

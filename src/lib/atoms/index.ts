@@ -1,4 +1,6 @@
 export * from './fullScreenBlurb'
+export * from './githubIcon'
+export * from './linkedInIcon'
 export * from './mobileBlurb'
 export * from './shakeBtn'
 export * from './title'
