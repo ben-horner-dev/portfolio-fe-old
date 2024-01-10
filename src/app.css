@@ -32,6 +32,7 @@ a:hover {
 }
 
 body {
+  overflow: overlay;
   margin: 0;
   font-family:
     'JetBrains Mono',
@@ -49,6 +50,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(99, 99, 99);
+  border-radius: 10px;
 }
 
 code {
