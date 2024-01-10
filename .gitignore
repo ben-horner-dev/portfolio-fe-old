@@ -28,3 +28,4 @@ dist-ssr
 /playwright/.cache/
 coverage
 test-results
+tests/playwright-report/index.html
